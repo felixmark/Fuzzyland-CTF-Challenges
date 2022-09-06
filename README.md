@@ -9,7 +9,10 @@ gdb lvl1
 disas /m main
 x/s <ADDRESS OF PASSWORD>
 ```
-Solution: LosCTF{5tr1ngZ_FTW}
+<summary>Solution:</summary>
+```
+LosCTF{5tr1ngZ_FTW}
+```
 
 ## lvl2
 To solve lvl2 I had to decompile the program.
