@@ -110,7 +110,8 @@ e8 cb d7 e7 f0 e2 df dc 94 d6 95 ca c3 fb 90 c8 c8 fb d0 cc 97 fb d0 cc 95 ca c3
 LF NAME:
 ef fe ec ec e8 f0 ed fb b1 ef e8 fb 00 00 00 00
 
-The C++ program I used to inverse the operation `*(byte *)(str_position + param_1) != (byte)((&FLAG)[str_position] ^ LFNAME[0] + 181)` of the decompiled program:
+The C++ program I used to inverse the operation
+`*(byte *)(str_position + param_1) != (byte)((&FLAG)[str_position] ^ LFNAME[0] + 181)` of the decompiled program:
 <details>
 <summary>Reversal program</summary>
   
