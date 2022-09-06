@@ -4,11 +4,14 @@ My solutions with explanations to the https://fuzzy.land challenges.
 ## lvl1
 To solve lvl1 a simple text editor, the program `strings` or `gdb` is used.
 This is the gdb solution:
+<details>
+<summary>Solution</summary>
 ```
 gdb lvl1
 disas /m main
 x/s <ADDRESS OF PASSWORD>
 ```
+</details>
 <details>
 <summary>Solution</summary>
 
@@ -28,6 +31,8 @@ Since they are not 0 terminated strings, I had to store the data in hex notation
 After writing a small program reversing the operations (XORing) done to the flag, I received the actual flag.
 
 The decompiled program:
+<details>
+<summary>Solution</summary>
 ```C
 int main(void) {
   FILE *__stream;
@@ -94,6 +99,7 @@ undefined8 check_pwd(long param_1)
   return 0xffffffff;
 }
 ```
+</details>
 
 I retrieved the data of FLAG and LFNAME once in Ghidra and once in gdb for good measure.
 These are the results:
@@ -104,6 +110,8 @@ LF NAME:
 ef fe ec ec e8 f0 ed fb b1 ef e8 fb 00 00 00 00
 
 The C++ program I used to inverse the operation `*(byte *)(str_position + param_1) != (byte)((&FLAG)[str_position] ^ LFNAME[0] + 181)` of the decompiled program:
+<details>
+<summary>Solution</summary>
 ```c++
 #include <iostream>
 
@@ -119,6 +127,7 @@ int main() {
   cout << endl;
 }
 ```
+</details>
 I compiled it by executing `g++ -o3 -Wall reversal_program.cpp -o gimme_pwd` and executed it by calling `./gimme_pwd`.
 This gave me the final flag for the challenge:
 <details>
