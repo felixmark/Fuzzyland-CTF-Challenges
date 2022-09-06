@@ -5,7 +5,7 @@ My solutions with explanations to the https://fuzzy.land challenges.
 To solve lvl1 a simple text editor, the program `strings` or `gdb` is used.
 This is the gdb solution:
 <details>
-<summary>Solution</summary>
+<summary>gdb commands</summary>
 ```
 gdb lvl1
 disas /m main
@@ -30,9 +30,8 @@ These two can be used, to calculate the password, which serves as the Flag.
 Since they are not 0 terminated strings, I had to store the data in hex notation in arrays.
 After writing a small program reversing the operations (XORing) done to the flag, I received the actual flag.
 
-The decompiled program:
 <details>
-<summary>Solution</summary>
+<summary>The decompiled program</summary>
 ```C
 int main(void) {
   FILE *__stream;
@@ -105,13 +104,13 @@ I retrieved the data of FLAG and LFNAME once in Ghidra and once in gdb for good 
 These are the results:
 FLAG:
 e8 cb d7 e7 f0 e2 df dc 94 d6 95 ca c3 fb 90 c8 c8 fb d0 cc 97 fb d0 cc 95 ca c3 91 d9 00
-
+  
 LF NAME:
 ef fe ec ec e8 f0 ed fb b1 ef e8 fb 00 00 00 00
 
 The C++ program I used to inverse the operation `*(byte *)(str_position + param_1) != (byte)((&FLAG)[str_position] ^ LFNAME[0] + 181)` of the decompiled program:
 <details>
-<summary>Solution</summary>
+<summary>Reversal program</summary>
 ```c++
 #include <iostream>
 
