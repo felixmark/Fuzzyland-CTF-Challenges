@@ -6,6 +6,7 @@ To solve lvl1 a simple text editor, the program `strings` or `gdb` is used.
 This is the gdb solution:
 <details>
 <summary>gdb commands</summary>
+  
 ```
 gdb lvl1
 disas /m main
@@ -32,6 +33,7 @@ After writing a small program reversing the operations (XORing) done to the flag
 
 <details>
 <summary>The decompiled program</summary>
+  
 ```C
 int main(void) {
   FILE *__stream;
@@ -111,6 +113,7 @@ ef fe ec ec e8 f0 ed fb b1 ef e8 fb 00 00 00 00
 The C++ program I used to inverse the operation `*(byte *)(str_position + param_1) != (byte)((&FLAG)[str_position] ^ LFNAME[0] + 181)` of the decompiled program:
 <details>
 <summary>Reversal program</summary>
+  
 ```c++
 #include <iostream>
 
