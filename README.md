@@ -10,7 +10,7 @@ disas /m main
 x/s <ADDRESS OF PASSWORD>
 ```
 <details>
-<summary>Solution:</summary>
+<summary>Solution</summary>
 
 ```
 LosCTF{5tr1ngZ_FTW}
