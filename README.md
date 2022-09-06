@@ -14,7 +14,6 @@ disas /m main
 x/s <ADDRESS OF PASSWORD>
 ```
 </details>
-<details>
 
 
 ## lvl2
