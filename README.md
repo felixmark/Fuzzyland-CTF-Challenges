@@ -131,6 +131,7 @@ int main() {
 }
 ```
 </details>
+
 I compiled it by executing `g++ -o3 -Wall reversal_program.cpp -o gimme_pwd` and executed it by calling `./gimme_pwd`.
 This gave me the final flag for the challenge:
 <details>
