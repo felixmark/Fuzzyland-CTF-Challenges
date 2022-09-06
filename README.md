@@ -1,6 +1,7 @@
 # Fuzzyland-CTF-Challenges
 My solutions with explanations to the https://fuzzy.land challenges.
 
+
 ## lvl1
 To solve lvl1 a simple text editor, the program `strings` or `gdb` is used.
 This is the gdb solution:
@@ -14,12 +15,7 @@ x/s <ADDRESS OF PASSWORD>
 ```
 </details>
 <details>
-<summary>Solution</summary>
 
-```
-LosCTF{5tr1ngZ_FTW}
-```
-</details>
 
 ## lvl2
 To solve lvl2 I had to decompile the program. I used Ghidra for that purpose.
@@ -133,11 +129,4 @@ int main() {
 </details>
 
 I compiled it by executing `g++ -o3 -Wall reversal_program.cpp -o gimme_pwd` and executed it by calling `./gimme_pwd`.
-This gave me the final flag for the challenge:
-<details>
-<summary>Solution</summary>
-
-```
-LosCTF{x0r1ng_4ll_th3_th1ng5}
-```
-</details>
+This gave me the final flag for the challenge.
